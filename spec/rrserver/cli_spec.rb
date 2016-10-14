@@ -28,7 +28,7 @@ describe Rrserver::CLI do
 		end
 
 		it "build a launcher and executes run" do 
-			expect(Rrserver::launcher).to receive(:new).with(4000, "0.0.0.0", true, 16, "./config.ru") { launcher }
+			expect(Rrserver::Launcher).to receive(:new).with(4000, "0.0.0.0", true, 16, "./config.ru") { launcher }
 			expect(launcher).to receive(:run)
 			cli.parse(["--port", "4000", "--bind", "0.0.0.0", "--backlog", "16"])
 		end
