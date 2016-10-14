@@ -1,5 +1,8 @@
+require "rrserver/logger"
 require "rrserver/version"
 
 module Rrserver
-  # Your code goes here...
+	def self.logger
+		@logger ||= Rrserver::logger.new
+	end
 end
