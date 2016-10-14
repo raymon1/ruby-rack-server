@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
 require "rrserver"
+cli = Rrserver::CLI.new
+cli.parse
